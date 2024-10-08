@@ -10,7 +10,7 @@ SANDBOXED_PROPERTIES(1, {
 	.default_value = Variant{1.0f},
 });
 
-extern "C" void _process_parent_child(double delta, Node3D parent, Node3D child) {
+extern "C" void _process_parent_child(double delta, Variant parent, Variant child) {
 	if (is_editor()) {
 		return;
 	}
