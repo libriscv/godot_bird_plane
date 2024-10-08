@@ -5,13 +5,13 @@ uniform float transmission : hint_range(0,1);
 uniform float proximity_fade_distance;
 
 void vertex(){
-	mat4 mat_world = mat4(normalize(CAMERA_MATRIX[0])*length(WORLD_MATRIX[0]),normalize(CAMERA_MATRIX[1])*length(WORLD_MATRIX[0]),normalize(CAMERA_MATRIX[2])*length(WORLD_MATRIX[2]),WORLD_MATRIX[3]);
+	mat4 mat_world = mat4(normalize(INV_VIEW_MATRIX[0])*length(MODEL_MATRIX[0]),normalize(INV_VIEW_MATRIX[1])*length(MODEL_MATRIX[0]),normalize(INV_VIEW_MATRIX[2])*length(MODEL_MATRIX[2]),MODEL_MATRIX[3]);
 	mat_world = mat_world * mat4( vec4(cos(INSTANCE_CUSTOM.x),-sin(INSTANCE_CUSTOM.x), 0.0, 0.0), vec4(sin(INSTANCE_CUSTOM.x), cos(INSTANCE_CUSTOM.x), 0.0, 0.0),vec4(0.0, 0.0, 1.0, 0.0),vec4(0.0, 0.0, 0.0, 1.0));
-	MODELVIEW_MATRIX = INV_CAMERA_MATRIX * mat_world;
+	MODELVIEW_MATRIX = VIEW_MATRIX * mat_world;
 }
 
 void fragment(){
-	TRANSMISSION = vec3(transmission);
+	BACKLIGHT = vec3(transmission);
 	float depth_tex = textureLod(DEPTH_TEXTURE,SCREEN_UV,0.0).r;
 	vec4 world_pos = INV_PROJECTION_MATRIX * vec4(SCREEN_UV*2.0-1.0,depth_tex*2.0-1.0,1.0);
 	world_pos.xyz/=world_pos.w;

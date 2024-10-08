@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clg3alshuijwa"
-path.s3tc="res://.godot/imported/AllSkyFree_Sky_AnotherPlanet_Equirect.png-198d62de3ac605941426297d6d1040f2.s3tc.ctex"
+uid="uid://djkbvji77h3vk"
+path.s3tc="res://.godot/imported/birdplane_Birdplane.png-3565993fdfdbaf2c416a00b89adeb0b1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "a4645160149d01531fe439971d81acb8"
+}
 
 [deps]
 
-source_file="res://bird_plane/effects/AllSkyFree/AllSkyFree_Skyboxes/AllSkyFree_Sky_AnotherPlanet_Equirect.png"
-dest_files=["res://.godot/imported/AllSkyFree_Sky_AnotherPlanet_Equirect.png-198d62de3ac605941426297d6d1040f2.s3tc.ctex"]
+source_file="res://bird_plane/character/birdplane_Birdplane.png"
+dest_files=["res://.godot/imported/birdplane_Birdplane.png-3565993fdfdbaf2c416a00b89adeb0b1.s3tc.ctex"]
 
 [params]
 

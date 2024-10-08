@@ -13,7 +13,7 @@ uniform float scale_random;
 uniform float hue_variation_random;
 uniform float anim_speed_random;
 uniform float anim_offset_random;
-uniform vec4 color : hint_color;
+uniform vec4 color : source_color;
 uniform sampler2D color_ramp;
 uniform float alpha : hint_range(0,1);
 

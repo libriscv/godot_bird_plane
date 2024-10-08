@@ -6,25 +6,25 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
-
-_global_script_classes=[  ]
-_global_script_class_icons={
-
-}
+config_version=5
 
 [application]
 
 config/name="WasGo Bird Plane Project"
 run/main_scene="res://bird_plane/scenes/wasgo_scene.scn"
+config/features=PackedStringArray("4.3")
 config/icon="res://house/icon.png"
 
 [display]
 
-window/size/width=1920
-window/size/height=1080
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/size/fullscreen=true
 
-[memory]
+[editor]
 
-limits/message_queue/max_size_kb=4096
+script/unboxed_types_for_sandbox_arguments=false
+
+[filesystem]
+
+import/blender/enabled=false
