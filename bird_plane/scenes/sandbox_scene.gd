@@ -1,8 +1,5 @@
 extends Node3D
 
-@onready var plane: Node3D = $"Plane"
-@onready var camera: Node3D = $"Camera"
-
 @export var smooth_follow: Sandbox
 @export var thrust: Sandbox
 
@@ -10,6 +7,8 @@ var sensitivity: float
 var mouse_speed: Vector2
 
 func _process(delta: float):
+	var plane: Node3D = get_node("Plane")
+	var camera: Node3D = get_node("Camera")
 	smooth_follow._process_parent_child(delta, plane, camera)
 	thrust._physics_process_plane(delta, plane)
 
