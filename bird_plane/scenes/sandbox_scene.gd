@@ -11,7 +11,6 @@ func _process(delta: float):
 	var camera: Node3D = get_node("Camera")
 	smooth_follow._process_parent_child(delta, plane, camera)
 	thrust._physics_process_plane(delta, plane)
-	breakpoint
 
 func _physics_process(_delta) -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
