@@ -45,7 +45,7 @@ SANDBOXED_PROPERTIES(6, {
 	.default_value = Variant{0.9f},
 });
 
-extern "C" void _physics_process_plane(float delta, Node3D plane) {
+extern "C" void _physics_process_plane(double delta, Node3D plane) {
 	if (is_editor()) {
 		return;
 	}
