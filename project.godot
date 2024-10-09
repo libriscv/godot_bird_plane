@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="WasGo Bird Plane Project"
+config/name="Godot Sandbox Bird Plane Project"
 run/main_scene="res://bird_plane/scenes/wasgo_scene.scn"
 config/features=PackedStringArray("4.3")
 config/icon="res://house/icon.png"
@@ -23,7 +23,7 @@ window/size/fullscreen=true
 
 [editor]
 
-script/unboxed_types_for_sandbox_arguments=false
+script/debug_info=true
 
 [filesystem]
 
