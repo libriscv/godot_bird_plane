@@ -14,3 +14,11 @@ extern "C" Variant _input_plane(InputEventMouseMotion input, Node3D plane, Vecto
 
 	return Nil;
 }
+
+SANDBOX_API({
+	.name = "_input_plane",
+	.address = (void*)&_input_plane,
+	.description = "Makes the control plane follow mouse movement smoothly",
+	.return_type = "void",
+	.arguments = "InputEventMouseMotion input, Node3D plane, Vector2 input_mouse_speed",
+});
