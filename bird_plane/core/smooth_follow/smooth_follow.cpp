@@ -14,21 +14,17 @@ static Transform3D last_transform = Transform3D::identity();
 
 extern "C" Variant _process_parent_child(double delta, Node3D parent, Node3D child) {
 	if (is_editor_hint()) {
-		return Nil;
+		return Nil; //
 	}
 
 	Transform3D parent_transform = parent.get_transform();
 	last_transform = last_transform.interpolate_with(parent_transform, smoothness);
 	last_transform.set_basis(parent_transform.get_basis().slerp(last_transform.get_basis(), smoothness / 2));
 	child.set_transform(last_transform);
-
 	return Nil;
 }
 
-SANDBOX_API({
-	.name = "_process_parent_child",
-	.address = (void*)&_process_parent_child,
-	.description = "Makes the plane smoothly follow the camera direction",
-	.return_type = "void",
-	.arguments = "double delta, Node3D parent, Node3D child",
-});
+int main() {
+	ADD_API_FUNCTION(_process_parent_child, "void", "double delta, Node3D parent, Node3D child", "Makes the plane smoothly follow the camera direction"); //
+	halt();
+}

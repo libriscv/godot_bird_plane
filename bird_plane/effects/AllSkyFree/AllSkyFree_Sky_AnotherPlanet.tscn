@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://crpu87o2ioolm"]
+[gd_scene load_steps=3 format=3 uid="uid://crpu87o2ioolm"]
 
 [sub_resource type="Sky" id="1"]
 
@@ -16,9 +16,6 @@ glow_hdr_threshold = 0.44
 fog_depth_curve = 2.2974
 fog_depth_begin = 0.0
 fog_depth_end = 1197.5
-
-[sub_resource type="Resource" id="Resource_bw1t4"]
-metadata/__load_path__ = "res://AllSkyFree_DemoLandsacpe.tscn"
 
 [node name="AllSkyFree_Sky_AnotherPlanet" type="Node"]
 

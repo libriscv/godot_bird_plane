@@ -17,6 +17,10 @@ func _ready() -> void:
 	thrust.set_method_allowed_callback(simple_method_filter)
 	turning.set_method_allowed_callback(simple_method_filter)
 
+	var fa = FileAccess.open("res://bintr.c", FileAccess.WRITE)
+	fa.store_string(thrust.emit_binary_translation(true, true))
+	fa.close()
+
 func _process(delta: float):
 	var plane: Node3D = get_node("Plane")
 	var camera: Node3D = get_node("Camera")

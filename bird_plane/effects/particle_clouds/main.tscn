@@ -1,9 +1,9 @@
 [gd_scene load_steps=57 format=3 uid="uid://cs1a5kqwjlano"]
 
-[ext_resource type="Shader" path="res://bird_plane/effects/particle_clouds/cloud-particles.gdshader" id="1"]
-[ext_resource type="Shader" path="res://bird_plane/effects/particle_clouds/cloud-fragment.gdshader" id="2"]
-[ext_resource type="Script" path="res://bird_plane/effects/particle_clouds/Clouds.gd" id="3"]
-[ext_resource type="Script" path="res://bird_plane/effects/particle_clouds/Cloud.gd" id="4"]
+[ext_resource type="Shader" uid="uid://cvbu5pyk4gotu" path="res://bird_plane/effects/particle_clouds/cloud-particles.gdshader" id="1"]
+[ext_resource type="Shader" uid="uid://c12jdoky7uhef" path="res://bird_plane/effects/particle_clouds/cloud-fragment.gdshader" id="2"]
+[ext_resource type="Script" uid="uid://cs1ud8j5ml3n0" path="res://bird_plane/effects/particle_clouds/Clouds.gd" id="3"]
+[ext_resource type="Script" uid="uid://fmtrrsh0mlxv" path="res://bird_plane/effects/particle_clouds/Cloud.gd" id="4"]
 
 [sub_resource type="ShaderMaterial" id="3"]
 render_priority = 0
