@@ -1,6 +1,6 @@
 #include "api.hpp"
 
-static float smoothness = 0.9f;
+static float smoothness = 0.8f;
 
 SANDBOXED_PROPERTIES(1, {
 	.name = "smoothness",
